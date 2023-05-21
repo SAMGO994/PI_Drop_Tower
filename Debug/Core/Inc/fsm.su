@@ -1,0 +1,2 @@
+../Core/Inc/fsm.c:7:21:fsm_state_change	24	static
+../Core/Inc/fsm.c:49:16:fsm_state_action	32	static
