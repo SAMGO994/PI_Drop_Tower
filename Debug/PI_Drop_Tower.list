@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0002001c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00012a49  00000000  00000000  0002004c  2**0
+ 12 .debug_info   00012a11  00000000  00000000  0002004c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 000025b1  00000000  00000000  00032a95  2**0
+ 13 .debug_abbrev 000025b1  00000000  00000000  00032a5d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000ff8  00000000  00000000  00035048  2**3
+ 14 .debug_aranges 00000ff8  00000000  00000000  00035010  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000f10  00000000  00000000  00036040  2**3
+ 15 .debug_ranges 00000f10  00000000  00000000  00036008  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  00020c27  00000000  00000000  00036f50  2**0
+ 16 .debug_macro  00020c27  00000000  00000000  00036f18  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   000123b9  00000000  00000000  00057b77  2**0
+ 17 .debug_line   000123a3  00000000  00000000  00057b3f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000c8c52  00000000  00000000  00069f30  2**0
+ 18 .debug_str    000c8c52  00000000  00000000  00069ee2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  00132b82  2**0
+ 19 .comment      00000050  00000000  00000000  00132b34  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000042cc  00000000  00000000  00132bd4  2**2
+ 20 .debug_frame  000042d4  00000000  00000000  00132b84  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1640,7 +1640,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
  8000bb2:	2108      	movs	r1, #8
  8000bb4:	f04f 4090 	mov.w	r0, #1207959552	; 0x48000000
  8000bb8:	f000 fdc6 	bl	8001748 <HAL_GPIO_WritePin>
-	memset(UART1_rxBuffer, 0, sizeof(UART1_rxBuffer)); //is it usesfull
+	memset(UART1_rxBuffer, 0, sizeof(UART1_rxBuffer)); //is it usesfull?
  8000bbc:	2206      	movs	r2, #6
  8000bbe:	2100      	movs	r1, #0
  8000bc0:	4804      	ldr	r0, [pc, #16]	; (8000bd4 <HAL_UART_RxCpltCallback+0x8c>)

@@ -521,7 +521,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 
 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, 0);
-	memset(UART1_rxBuffer, 0, sizeof(UART1_rxBuffer)); //is it usesfull
+	memset(UART1_rxBuffer, 0, sizeof(UART1_rxBuffer)); //is it usesfull?
 }
 
 
@@ -529,20 +529,20 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 void Open_clamp(bool state){
 	switch(state){
 	case true:
-		HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+		//HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 	break;
 	default:
-		HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_2);
+		//HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_2);
 	break;
 	}
 }
 void Close_clamp(bool state){
 	switch(state){
 	case true:
-		HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+		//HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
 	break;
 	default:
-		HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
+		//HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
 	break;
 	}
 }
