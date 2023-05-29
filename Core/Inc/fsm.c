@@ -58,20 +58,20 @@ extern uint8_t fsm_state_action(eSystemState state, signal_struct signal, TIM_Ha
 		case Clamp_Opening_State:
 
 			//set PWM motor for open clamp
-			  //HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+			  HAL_TIM_PWM_Start(htim2, TIM_CHANNEL_2);
 
 			if(counter >=3000){
 				counter = 0;
 				//stop PWM
-				//HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_2);
+				HAL_TIM_PWM_Stop(htim2, TIM_CHANNEL_2);
 				//action_result = ACTION_ERROR;  //correct line
 				action_result = ACTION_OK; //fake line for debug purpose
 			}
 
 
 			if(signal.clamp_switch_close_1 && signal.clamp_switch_close_2){
-				//stop PWM
-				//HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_2);
+				//stop PW
+				HAL_TIM_PWM_Stop(htim2, TIM_CHANNEL_2);
 				//action_result = ACTION_OK; //fake
 			}
 
@@ -82,12 +82,12 @@ extern uint8_t fsm_state_action(eSystemState state, signal_struct signal, TIM_Ha
 		case Clamp_Closing_State:
 
 			//set PWM motor for open clamp
-			//HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+			HAL_TIM_PWM_Start(htim1, TIM_CHANNEL_2);
 
 			if(counter >=3000){
 				counter = 0;
 				//stop PWM
-				//HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
+				HAL_TIM_PWM_Stop(htim1, TIM_CHANNEL_2);
 				//action_result = ACTION_ERROR;  //correct line
 				action_result = ACTION_OK; //fake line for debug purpose
 				//stop PWM
@@ -97,7 +97,7 @@ extern uint8_t fsm_state_action(eSystemState state, signal_struct signal, TIM_Ha
 			if(signal.clamp_switch_open_1 && signal.clamp_switch_open_2){
 				//action_result = ACTION_OK; //fake
 				//stop PWM
-				//HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
+				HAL_TIM_PWM_Stop(htim1, TIM_CHANNEL_2);
 			}
 
 			counter ++;
