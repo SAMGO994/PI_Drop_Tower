@@ -5,8 +5,8 @@ main.c:305:13:MX_TIM2_Init	6
 main.c:364:13:MX_TIM6_Init	3
 main.c:402:13:MX_USART1_UART_Init	2
 main.c:437:13:MX_GPIO_Init	1
-main.c:489:6:HAL_TIM_PeriodElapsedCallback	2
-main.c:498:6:HAL_UART_RxCpltCallback	5
-main.c:532:6:main_tick	1
-main.c:543:6:status_led	2
-main.c:564:6:Error_Handler	1
+main.c:509:6:HAL_TIM_PeriodElapsedCallback	2
+main.c:518:6:HAL_UART_RxCpltCallback	5
+main.c:552:6:main_tick	1
+main.c:563:6:status_led	2
+main.c:584:6:Error_Handler	1
